@@ -90,7 +90,7 @@ h2 {
   مجلس احیائے اسلام
 </div>
     <h1>کرایہ وصولی و معاہدہ مینجمنٹ سسٹم</h1><div>معاہدوں سے وصولی تک، ایک جگہ مکمل انتظام</div></header><main>
-<div class="notice">یہ ابتدائی ورژن اس براؤزر میں ڈیٹا محفوظ کرتا ہے۔ باقاعدگی سے بیک اپ ڈاؤن لوڈ کریں۔ خطوط خودکار ڈرافٹ ہوتے ہیں؛ ارسال آپ کریں گے۔</div>
+<div class="notice">خط کا مسودہ خودکار طور پر تیار ہوگا۔ آپ اسے پڑھ کر، ضروری تبدیلیوں کے بعد خود ارسال کریں گے۔</div>
 <nav>
 <button onclick="view='all';render()">تمام دکانیں</button><button class="secondary" onclick="view='received';render()">Received رپورٹ</button><button class="secondary" onclick="view='pending';render()">Pending رپورٹ</button><button class="secondary" onclick="historyView()">رسیدوں کی تاریخ</button></nav>
 <div class="toolbar"><label>رپورٹ کا مہینہ<input id="month" type="month" onchange="render()"></label><label>دکان یا دوکاندار تلاش کریں<input id="search" placeholder="نام یا دکان نمبر" oninput="render()"></label><button onclick="shopForm()">+ نئی دکان</button><button class="secondary" onclick="csv()">رپورٹ ڈاؤن لوڈ</button><button class="secondary" onclick="backup()">ڈیٹا بیک اپ</button><button class="secondary" onclick="document.getElementById('restore').click()">بیک اپ بحال کریں</button><input hidden type="file" id="restore" accept="application/json" onchange="restoreData(event)"></div>
