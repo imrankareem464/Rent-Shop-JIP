@@ -216,7 +216,21 @@ dialog::backdrop { background: #1237; }
   color: #b42318;
 }
 
+/* عبارت دائیں، Logout بائیں */
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-row p {
+  margin: 0;
+}
+
 .logout-button {
   background: #b42318;
-  margin-top: 15px;
+  margin: 0;
+  flex-shrink: 0;
 }
