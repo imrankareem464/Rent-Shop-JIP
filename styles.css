@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  background: #f3f6f4;
+  color: #183e35;
+}
+
+body, button, input, select, textarea, table, dialog {
+  font-family: "Jameel Noori Nastaleeq", Tahoma, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 2;
+}
+
+h1 { margin: 0; font-size: 26px; line-height: 1.5; }
+h2 { font-size: 30px; }
+a { color: inherit; }
+.hidden { display: none; }
+
+/* اوپر والا سبز باکس */
+header {
+  background: #143f35;
+  color: white;
+  padding: 10px 5%;
+}
+
+.organization {
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+header > div:last-child {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* مرکزی صفحہ */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+nav, .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* بٹن اور فارم */
+button, input, select, textarea {
+  font: inherit;
+  border: 1px solid #cbd8d0;
+  border-radius: 8px;
+  padding: 9px;
+}
+
+button {
+  cursor: pointer;
+  background: #176b52;
+  color: white;
+}
+
+button.secondary {
+  background: white;
+  color: #245344;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* خلاصے کے کارڈ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card, section {
+  background: white;
+  padding: 20px;
+  border: 1px solid #dde6df;
+  border-radius: 14px;
+}
+
+.card strong {
+  display: block;
+  font-size: 27px;
+}
+
+/* جدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  text-align: right;
+  padding: 13px;
+  border-bottom: 1px solid #e4ebe5;
+}
+
+.scroll { overflow: auto; }
+
+/* سٹیٹس اور پیغامات */
+.badge {
+  background: #fff0d5;
+  color: #9a6205;
+  border-radius: 20px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.received {
+  background: #e0f4e8;
+  color: #176b52;
+}
+
+.muted {
+  color: #64776f;
+  font-size: 14px;
+}
+
+.notice {
+  background: #fff6df;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* فارم اور رسید کی ونڈو */
+dialog {
+  border: 0;
+  border-radius: 15px;
+  max-width: 750px;
+  width: 85%;
+  box-shadow: 0 20px 80px #0004;
+}
+
+dialog::backdrop { background: #1237; }
+
+#document {
+  white-space: pre-wrap;
+  line-height: 2.2;
+  color: #111;
+  padding: 25px;
+}
+
+/* موبائل */
+@media (max-width: 700px) {
+  .cards, .grid { grid-template-columns: 1fr 1fr; }
+  main, .card { padding: 12px; }
+  td, th { padding: 8px; }
+}
+
+/* رسید یا خط کا پرنٹ */
+@media print {
+  body > * { display: none !important; }
+
+  #paper[open] {
+    display: block !important;
+    position: static;
+    width: auto;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  #paper[open] > :not(#document) {
+    display: none !important;
+  }
+
+  #document { display: block !important; }
+}
