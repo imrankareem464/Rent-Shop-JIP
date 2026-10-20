@@ -84,7 +84,19 @@
   </button>
 </nav>
 <div class="toolbar"><label>رپورٹ کا مہینہ<input id="month" type="month" onchange="render()"></label><label>دکان یا دوکاندار تلاش کریں<input id="search" placeholder="نام یا دکان نمبر" oninput="render()"></label><button onclick="shopForm()">+ نئی دکان</button><button class="secondary" onclick="csv()">رپورٹ ڈاؤن لوڈ</button><button class="secondary" onclick="backup()">ڈیٹا بیک اپ</button><button class="secondary" onclick="document.getElementById('restore').click()">بیک اپ بحال کریں</button><input hidden type="file" id="restore" accept="application/json" onchange="restoreData(event)"></div>
-<div class="cards" id="cards"></div><h2 id="heading">ماہانہ کرایہ</h2><section class="scroll"><table><thead id="thead"></thead><tbody id="rows"></tbody></table><p id="empty" class="muted"></p></section><p class="muted">معاہدے کے آغاز اور اختتام کے مہینے کا مکمل کرایہ شمار ہوتا ہے۔ جزوی ادائیگی کے بعد باقی رقم Pending رہتی ہے۔</p><button type="button" class="logout-button" onclick="logoutAdmin()">Logout</button>
+<div class="footer-row">
+  <p class="muted">
+    معاہدے کے آغاز اور اختتام کے مہینے کا مکمل کرایہ شمار ہوتا ہے۔
+    جزوی ادائیگی کے بعد باقی رقم Pending رہتی ہے۔
+  </p>
+
+  <button
+    type="button"
+    class="logout-button"
+    onclick="logoutAdmin()">
+    Logout
+  </button>
+</div>
 </main>
 <dialog id="form"><h2 id="formTitle"></h2><form id="editor"><div id="fields" class="grid"></div><p id="error" style="color:#b23"></p><button>محفوظ کریں</button> <button type="button" class="secondary" onclick="document.getElementById('form').close()">منسوخ</button></form></dialog>
 <dialog id="paper"><div class="toolbar"><button onclick="window.print()">پرنٹ / PDF</button><button class="secondary" onclick="document.getElementById('paper').close()">بند کریں</button></div><div id="document" contenteditable="true"></div><p class="muted">خط کے متن میں پرنٹ سے پہلے ترمیم کی جا سکتی ہے۔</p></dialog>
